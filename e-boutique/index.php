@@ -26,7 +26,7 @@ $controller = new $ctrl($db);
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Titre</title>
+        <title>E-boutique</title>
         <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./ressources/style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -42,7 +42,7 @@ $controller = new $ctrl($db);
               <a href="index.php?ctrl=user&action=inscription">Inscription</a>
             </div>
           </div>
-          <div class="col-md-12"><h1>Film</h1><img src="./ressources/img/video-camera.png"/></div>
+          <div class="col-md-12"><h1><a href="index.php">Film</a></h1><img src="./ressources/img/video-camera.png"/></div>
       </div>
 
 			<div class="content">

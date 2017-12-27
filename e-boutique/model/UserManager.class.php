@@ -9,7 +9,7 @@ class UserManager
     {
         try
         {
-         $db = new PDO('mysql:host=localhost;dbname=tp-user-manager;charset=utf8', 'root', 'root');
+         $db = new PDO('mysql:host=localhost;dbname=eboutique;charset=utf8', 'root', 'root');
         }
         catch(Exception $e)
         {

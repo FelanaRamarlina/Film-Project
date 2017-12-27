@@ -6,7 +6,7 @@ class Connexion {
 
 	public function getConnexion() {
 			try {
-					$db = new PDO('mysql:host=localhost;dbname=e-boutique;charset=utf8', $this->user, $this->pass);
+					$db = new PDO('mysql:host=localhost;dbname=eboutique;charset=utf8', $this->user, $this->pass);
 			} catch (Exception $e) {
 					die("Erreur de connexion SQL");
 			}
