@@ -42,7 +42,7 @@ $controller = new $ctrl($db);
               <a href="index.php?ctrl=user&action=inscription">Inscription</a>
             </div>
           </div>
-          <div class="col-md-12"><h1><a href="index.php">RS</a></h1><img src="./ressources/img/video-camera.png"/></div>
+          <div class="col-md-12"><h1><a href="index.php">RS films</a></h1><img src="./ressources/img/video-camera.png"/></div>
       </div>
 
 			<div class="content">

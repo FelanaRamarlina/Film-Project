@@ -44,7 +44,7 @@
   </div><!-- container-fluid -->
 </nav>
         <div class="titreindex">
-            <h1>TOP FILMS A L'AFFICHE</h1>    
+            <h2>Exclus</h2>    
         </div>
     </div> 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -79,7 +79,13 @@
       <span class="sr-only">Suivant</span>
     </a>
   </div>
-</div>    
+    
+    <h2> Les films à découvrir prochainement à télécharger  </h2>
+    
+    ALTER TABLE produit
+ADD CONSTRAINT id_photo FOREIGN KEY (produit) REFERENCES photo(id_photo);
+    
 </div>
+
 
 
