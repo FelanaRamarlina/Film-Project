@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(!empty($_SESSION['user']))
+  $connexion = "Connexion";
+else{
+  $connexion = "Deconnexion";
+}
+
 ini_set("display_errors", "1");
 require_once('model/Connexion.class.php');
 $pdoBuilder = new Connexion();
@@ -8,6 +14,10 @@ $db = $pdoBuilder->getConnexion();
 if (( isset($_GET['ctrl']) && !empty($_GET['ctrl']) ) && ( isset($_GET['action']) && !empty($_GET['action']) )) {
     $ctrl = $_GET['ctrl'];
     $action = $_GET['action'];
+
+    if($connexion == "Deconnexion"){
+      session_destroy();
+    }
 }
 else {
     $ctrl = 'User';
@@ -38,7 +48,7 @@ $controller = new $ctrl($db);
           <div class="col-md-12">
             <div class="nav">
               <a href="#">Mon panier (0) |</a>
-              <a href="index.php?ctrl=user&action=login">Connexion |</a>
+              <a href="index.php?ctrl=user&action=login"><?php echo $connexion ?> |</a>
               <a href="index.php?ctrl=user&action=inscription">Inscription</a>
             </div>
           </div>

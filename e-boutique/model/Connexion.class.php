@@ -13,5 +13,4 @@ class Connexion {
 			return $db;
 	}
 
-
 }
