@@ -1,9 +1,10 @@
 <?php
 session_start();
-if(!empty($_SESSION['user']))
-  $connexion = "Connexion";
-else{
+
+if(empty($_SESSION['user'])){
   $connexion = "Deconnexion";
+}else{
+  $connexion = "Connexion";
 }
 
 ini_set("display_errors", "1");
