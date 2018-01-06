@@ -2,9 +2,11 @@
 session_start();
 
 if(empty($_SESSION['user'])){
-  $connexion = "Deconnexion";
-}else{
   $connexion = "Connexion";
+  $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription</a>";
+}else{
+  $connexion = "Deconnexion";
+  $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace</a>";
 }
 
 ini_set("display_errors", "1");
@@ -49,8 +51,8 @@ $controller = new $ctrl($db);
           <div class="col-md-12">
             <div class="nav">
               <a href="#">Mon panier (0) |</a>
-              <a href="index.php?ctrl=user&action=login"><?php echo $connexion ?> |</a>
-              <a href="index.php?ctrl=user&action=inscription">Inscription</a>
+              <?php echo $espacePerso ?>
+              <a href="index.php?ctrl=user&action=login">| <?php echo $connexion ?> </a>
             </div>
           </div>
           <div class="col-md-12"><h1><a href="index.php">RS films</a></h1><img src="./ressources/img/video-camera.png"/></div>

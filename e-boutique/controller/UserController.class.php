@@ -19,6 +19,11 @@ class userController {
         require('./views/index.php');
     }
 
+    public function monEspace(){
+      $page ='monEspace';
+      require('./views/index.php');
+    }
+
     public function inscription() {
       $page = 'inscription';
       require('./views/index.php');
@@ -49,7 +54,7 @@ class userController {
           if($admin==1){
             $page = "admin";
           }else{
-            $page = 'home';
+            $page = 'default';
           }
         }else {
         	$info = "Identifiants incorrects.";
