@@ -44,9 +44,9 @@
   </div><!-- container-fluid -->
 </nav>
         <div class="titreindex">
-            <h2>Exclus</h2>    
+            <h2>Exclus</h2>
         </div>
-    </div> 
+    </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -63,7 +63,7 @@
       <div class="item">
         <img src="./images/crime.jpeg" alt="Crime" style="width:100%;">
       </div>
-    
+
       <div class="item">
         <img src="./images/jumanji.jpg" alt="Jumanji" style="width:100%;">
       </div>
@@ -79,13 +79,10 @@
       <span class="sr-only">Suivant</span>
     </a>
   </div>
-    
+
     <h2> Les films à découvrir prochainement à télécharger  </h2>
-    
+
     ALTER TABLE produit
 ADD CONSTRAINT id_photo FOREIGN KEY (produit) REFERENCES photo(id_photo);
-    
+
 </div>
-
-
-

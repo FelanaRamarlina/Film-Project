@@ -1,5 +1,7 @@
 <?php
 session_start();
+require('./views/index.php');
+
 
 if(empty($_SESSION['user'])){
   $connexion = "Connexion";

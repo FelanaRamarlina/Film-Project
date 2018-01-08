@@ -106,5 +106,7 @@ class userController {
   		$page = "default";
   		require('./views/index.php');
 	  }
+
+
   }
 ?>
