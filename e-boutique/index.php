@@ -4,11 +4,11 @@ require('./views/index.php');
 
 
 if(empty($_SESSION['user'])){
-  $connexion = "Connexion";
-  $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription</a>";
+  $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
+  $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
 }else{
-  $connexion = "Deconnexion";
-  $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace</a>";
+  $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
+  $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";
 }
 
 ini_set("display_errors", "1");
@@ -19,10 +19,6 @@ $db = $pdoBuilder->getConnexion();
 if (( isset($_GET['ctrl']) && !empty($_GET['ctrl']) ) && ( isset($_GET['action']) && !empty($_GET['action']) )) {
     $ctrl = $_GET['ctrl'];
     $action = $_GET['action'];
-
-    if($connexion == "Deconnexion"){
-      session_destroy();
-    }
 }
 else {
     $ctrl = 'User';
@@ -54,7 +50,7 @@ $controller = new $ctrl($db);
             <div class="nav">
               <a href="#">Mon panier (0) |</a>
               <?php echo $espacePerso ?>
-              <a href="index.php?ctrl=user&action=login">| <?php echo $connexion ?> </a>
+              <?php echo $connexion ?> </a>
             </div>
           </div>
           <div class="col-md-12"><h1><a href="index.php">RS films</a></h1><img src="./ressources/img/video-camera.png"/></div>

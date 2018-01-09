@@ -102,6 +102,12 @@ class userController {
   		require('./views/index.php');
     }
 
+    public function deconnexion(){
+      session_destroy();
+      $page = 'default';
+      require('./views/index.php');
+    }
+
     public function default() {
   		$page = "default";
   		require('./views/index.php');
