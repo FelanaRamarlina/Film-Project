@@ -81,8 +81,16 @@
   </div>
 
     <h2> Les films à découvrir prochainement à télécharger  </h2>
-
-    ALTER TABLE produit
-ADD CONSTRAINT id_photo FOREIGN KEY (produit) REFERENCES photo(id_photo);
+    
+    <div class="col-xs-12 col-md-12 cinqphotos">
+        <div class="col-xs-12 col-md-2">
+            <img src="./images/inception.jpg" alt="Inception" style="width:30%;">
+            <img src="./images/gladiator.jpg" alt="Gladiator" style="width:28%;">
+            <img src="./images/naked.jpg" alt="Naked" style="width:30%;">
+            <img src="./images/interstellar.jpg" alt="Intertellar" style="width:30%;">
+            <img src="./images/tnpp.jpg" alt="Tunetuerapoint" style="width:30%;">
+        </div>
+    
+    </div>
 
 </div>
