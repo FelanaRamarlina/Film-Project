@@ -84,27 +84,31 @@
     
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
-            <img src="./images/inception.jpg" alt="Inception" style="width:90%;">
+            <img src="./images/strangerthings.jpg" alt="Stranger Things" style="width:85%;">
+            <p> Stranger Things - HDRIP </p>
+            <p> Année : 2017</p>
         </div>
         <div class="col-xs-12 col-md-2">
-            <img src="./images/gladiator.jpg" alt="Gladiator" style="width:85%;">
+            <img src="./images/normandie.jpg" alt="Normandie" style="width:90%;">
+            <p> Normandie Nue - Full HD</p>
+            <p>Année : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
+            <p> Naked - 720p </p>
+            <p>Année : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/interstellar.jpg" alt="Intertellar" style="width:90%;">
+            <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:90%;">
+            <p> Ferdinand 1080p </p>
+            <p>Année : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/tnpp.jpg" alt="Tunetuerapoint" style="width:90%;">
+            <img src="./images/epouse.jpg" alt="Epouse" style="width:90%;">
+            <p> Epouse moi mon pote HD </p>
+            <p>Année : 2017</p>
         </div>    
     </div>
-
-    <br/>
-    <div class="col-xs-12 col-md-12 footer">
-        <footer>
-            <p> E-Boutique: Felana Ramarlina / Nicolas Sabak </p>
-            <p> 2017 - 2018 / Jussieu</p>
-        </footer>
-    </div>    
+    
+    <br/>  
 </div>
