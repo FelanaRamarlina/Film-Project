@@ -80,17 +80,31 @@
     </a>
   </div>
 
-    <h2> Les films à découvrir prochainement à télécharger  </h2>
+    <h2> Prochainement à télécharger...  </h2>
     
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
-            <img src="./images/inception.jpg" alt="Inception" style="width:30%;">
-            <img src="./images/gladiator.jpg" alt="Gladiator" style="width:28%;">
-            <img src="./images/naked.jpg" alt="Naked" style="width:30%;">
-            <img src="./images/interstellar.jpg" alt="Intertellar" style="width:30%;">
-            <img src="./images/tnpp.jpg" alt="Tunetuerapoint" style="width:30%;">
+            <img src="./images/inception.jpg" alt="Inception" style="width:90%;">
         </div>
-    
+        <div class="col-xs-12 col-md-2">
+            <img src="./images/gladiator.jpg" alt="Gladiator" style="width:85%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/interstellar.jpg" alt="Intertellar" style="width:90%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/tnpp.jpg" alt="Tunetuerapoint" style="width:90%;">
+        </div>    
     </div>
 
+    <br/>
+    <div class="col-xs-12 col-md-12 footer">
+        <footer>
+            <p> E-Boutique: Felana Ramarlina / Nicolas Sabak </p>
+            <p> 2017 - 2018 / Jussieu</p>
+        </footer>
+    </div>    
 </div>
