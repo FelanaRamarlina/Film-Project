@@ -28,7 +28,17 @@ class userController {
       $page = 'inscription';
       require('./views/index.php');
     }
+    
+    public function films() {
+      $page = 'films';
+      require('./views/index.php');
+    }
 
+    public function series() {
+      $page = 'series';
+      require('./views/index.php');
+    }
+    
     public function doLogin() {
         $this->user = new User();
         $dologinQuery = "SELECT email, password,admin FROM users WHERE email = :email and password = :password;";

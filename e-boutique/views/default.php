@@ -18,9 +18,8 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Films <span class="sr-only"></span></a></li>
-            <li><a href="#">Séries</a></li>
-            <li><a href="#">Déssins annimés</a></li>
+            <li><a href='index.php?ctrl=user&action=films'>Films <span class="sr-only"></span></a></li>
+            <li><a href='index.php?ctrl=user&action=series'>Séries</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -99,12 +98,12 @@
             <p>Année : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:90%;">
+            <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:86%;">
             <p> Ferdinand 1080p </p>
             <p>Année : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/epouse.jpg" alt="Epouse" style="width:90%;">
+            <img src="./images/epouse.jpg" alt="Epouse" style="width:86%;">
             <p> Epouse moi mon pote HD </p>
             <p>Année : 2017</p>
         </div>    
