@@ -85,28 +85,33 @@
         <div class="col-xs-12 col-md-2">
             <img src="./images/strangerthings.jpg" alt="Stranger Things" style="width:85%;">
             <p> Stranger Things - HDRIP </p>
-            <p> Année : 2017</p>
+            <p> Disponnible : 2017</p>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/normandie.jpg" alt="Normandie" style="width:90%;">
             <p> Normandie Nue - Full HD</p>
-            <p>Année : 2018</p>
+            <p>Disponnible : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
             <p> Naked - 720p </p>
-            <p>Année : 2018</p>
+            <p>Disponnible : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:86%;">
             <p> Ferdinand 1080p </p>
-            <p>Année : 2018</p>
+            <p>Disponnible : 2018</p>
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/epouse.jpg" alt="Epouse" style="width:86%;">
             <p> Epouse moi mon pote HD </p>
-            <p>Année : 2017</p>
-        </div>    
+            <p>Disponnible : 2017</p>
+        </div> 
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/bright.jpg" alt="Bright" style="width:84%;">
+            <p> Bright </p>
+            <p>Disponnible : 2018</p>
+        </div>  
     </div>
     
     <br/>  

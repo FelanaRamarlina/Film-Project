@@ -27,33 +27,50 @@
             </div><!-- container-fluid -->
         </nav>
         
-            <div class="col-xs-12 col-md-12 cinqphotos">
+    <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
-            <img src="./images/strangerthings.jpg" alt="Stranger Things" style="width:85%;">
-            <p> Stranger Things - HDRIP </p>
-            <p> Année : 2017</p>
+            <img src="./images/insidious.jpg" alt="Insidious" style="width:93%;">
         </div>
         <div class="col-xs-12 col-md-2">
-            <img src="./images/normandie.jpg" alt="Normandie" style="width:90%;">
-            <p> Normandie Nue - Full HD</p>
-            <p>Année : 2018</p>
+            <img src="./images/getout.jpg" alt="getout" style="width:93%;">
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
-            <p> Naked - 720p </p>
-            <p>Année : 2018</p>
+            <img src="./images/%C3%A7a.jpg" alt="ca" style="width:90%;">
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:90%;">
-            <p> Ferdinand 1080p </p>
-            <p>Année : 2018</p>
+            <img src="./images/girls.jpg" alt="girls" style="width:95%;">
         </div>    
         <div class="col-xs-12 col-md-2">    
-            <img src="./images/epouse.jpg" alt="Epouse" style="width:90%;">
-            <p> Epouse moi mon pote HD </p>
-            <p>Année : 2017</p>
-        </div>    
+            <img src="./images/kiss.jpg" alt="kiss&cry" style="width:95%;">
+        </div>  
+        
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/kingsman.jpg" alt="kingsman" style="width:95%;">
+        </div>          
     </div>
+        
+        <br/>
+        
+    <div class="col-xs-12 col-md-12 dixphotos">
+        <div class="col-xs-12 col-md-2">
+            <img src="./images/alice.jpg" alt="Alice" style="width:93%;">
+        </div>
+        <div class="col-xs-12 col-md-2">
+            <img src="./images/revenant.jpg" alt="Revenant" style="width:85%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/baby.jpg" alt="baby" style="width:93%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/valerian.jpg" alt="valerian" style="width:87%;">
+        </div>    
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/alibi.jpg" alt="Alibi" style="width:95%;">
+        </div>  
+        <div class="col-xs-12 col-md-2">    
+            <img src="./images/demolition.jpg" alt="Demolition" style="width:95%;">
+        </div>  
+    </div>    
         
     </div>
 </div>    
