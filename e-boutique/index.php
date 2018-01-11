@@ -48,7 +48,7 @@ $controller = new $ctrl($db);
       <div class="header container-fluid no-padding">
           <div class="col-md-12">
             <div class="nav">
-              <a href="#">Mon panier (0) |</a>
+              <a href="#">Mon panier |</a>
               <?php echo $espacePerso ?>
               <?php echo $connexion ?> </a>
             </div>
