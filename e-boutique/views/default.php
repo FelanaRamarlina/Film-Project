@@ -80,7 +80,7 @@
   </div>
 
     <h2> Prochainement à télécharger...  </h2>
-    
+
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
             <img src="./images/strangerthings.jpg" alt="Stranger Things" style="width:85%;">
@@ -93,32 +93,32 @@
             <p> Normandie Nue - Full HD</p>
             <p>Disponnible : 2018</p>
             <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=K_28848C_6U"> Voir la bande-annonce</a></button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
             <p> Naked - 720p </p>
             <p>Disponnible : 2018</p>
             <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=FbNVfnjxCtM"> Voir la bande-annonce</a></button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:86%;">
             <p> Ferdinand 1080p </p>
             <p>Disponnible : 2018</p>
             <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=XDPdFX7AetU"> Voir la bande-annonce</a></button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/epouse.jpg" alt="Epouse" style="width:86%;">
             <p> Epouse moi mon pote HD </p>
             <p>Disponnible : 2017</p>
             <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=0illlpw6TZ0"> Voir la bande-annonce</a></button>
-        </div> 
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/bright.jpg" alt="Bright" style="width:84%;">
             <p> Bright </p>
             <p>Disponnible : 2018</p>
             <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=ZKzvjeqmxuY"> Voir la bande-annonce</a></button>
-        </div>  
+        </div>
     </div>
-    
-    <br/>  
+
+    <br/>
 </div>
