@@ -56,7 +56,7 @@
         
         <div class="col-xs-12 col-md-2">    
             <img src="./images/kingsman.jpg" alt="kingsman" style="width:95%;">
-            <p> Kingsman 2017 - 720p  10€</p>
+            <p> Kingsman 2017 - 720p  15€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>          
     </div>
@@ -70,12 +70,12 @@
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/revenant.jpg" alt="Revenant" style="width:85%;">
-            <p> Kingsman 2016 - 1080p  10€</p>
+            <p> The Revenant - 1080p  15€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/baby.jpg" alt="baby" style="width:93%;">
-            <p> Baby Driver 2017 - HD 10€</p>
+            <p> Baby Driver 2017 - HD 12€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>    
         <div class="col-xs-12 col-md-2">    
@@ -85,7 +85,7 @@
         </div>    
         <div class="col-xs-12 col-md-2">    
             <img src="./images/alibi.jpg" alt="Alibi" style="width:95%;">
-            <p> Alibi.com 2017 - HD - 10€</p>
+            <p> Alibi.com 2017 - HD - 12€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>  
         <div class="col-xs-12 col-md-2">    
