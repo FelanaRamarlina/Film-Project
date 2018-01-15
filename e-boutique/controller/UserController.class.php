@@ -28,7 +28,7 @@ class userController {
       $page = 'inscription';
       require('./views/index.php');
     }
-    
+
     public function films() {
       $page = 'films';
       require('./views/index.php');
@@ -38,8 +38,11 @@ class userController {
       $page = 'series';
       require('./views/index.php');
     }
-    
+
     public function doLogin() {
+      if(!empty($_SESSION['user'])){
+        $page = "default";
+      }else{
         $this->user = new User();
         $dologinQuery = "SELECT email, password,admin FROM users WHERE email = :email and password = :password;";
     		$req = $this->db->prepare($dologinQuery);
@@ -59,8 +62,6 @@ class userController {
         if (!empty($login) && !empty($password)) {
       		$info = "Connexion reussie";
       		$_SESSION['user'] = $login;
-          $connexion = "Deconnexion";
-
           if($admin==1){
             $page = "admin";
           }else{
@@ -70,8 +71,8 @@ class userController {
         	$info = "Identifiants incorrects.";
     			$page = "login";
         }
-
-       		require('./views/index.php');
+      }
+      require('./views/index.php');
     }
 
     public function doCreate(){

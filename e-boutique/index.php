@@ -2,11 +2,11 @@
 session_start();
 require('./views/index.php');
 
-
 if(empty($_SESSION['user'])){
   $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
   $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
 }else{
+  $page = "default";
   $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
   $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";
 }
