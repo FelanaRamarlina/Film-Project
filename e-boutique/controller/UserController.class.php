@@ -13,9 +13,7 @@ class userController {
     }
 
     public function login() {
-
         $page = 'login';
-
         require('./views/index.php');
     }
 
