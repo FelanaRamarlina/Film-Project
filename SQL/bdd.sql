@@ -44,7 +44,7 @@ INSERT INTO `categorie` (`id_cat`, `libelle`) VALUES
 
 CREATE TABLE `Panier` (
   `id_user` int(3) NOT NULL,
-  `id_produit` varchar(5) NOT NULL
+  `id_produit` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -115,6 +115,10 @@ INSERT INTO `users` (`id_user`, `email`, `password`, `firstName`, `lastName`, `a
 ALTER TABLE `categorie`
   ADD PRIMARY KEY (`id_cat`);
 
+-- Index pour la table `categorie`
+--
+ALTER TABLE `produit`
+  ADD PRIMARY KEY (`id_produit`);
 --
 -- Index pour la table `Panier`
 --
@@ -151,7 +155,7 @@ ALTER TABLE `users`
 -- Contraintes pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
+  ADD CONSTRAINT `produit_ifk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
 --
 -- Contraintes pour la table `Panier`
 --
@@ -159,4 +163,4 @@ ALTER TABLE `Panier`
   ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
   
 ALTER TABLE `Panier`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_produit`) REFERENCES `users` (`id_user`);
+  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_produit`) REFERENCES `produit` (`id_produit`);
