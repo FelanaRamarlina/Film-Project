@@ -32,12 +32,14 @@
     text-align: center;
 }
 
+/*ESPACE MEMBRE*/
+
 .monEspace {
   border: 1px solid red;
   text-align: center;
 }
 .monEspace .divTitle {
-  padding-bottom: 50px: 
+  padding-bottom: 50px:
 }
 .monEspace h1 {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -54,7 +56,6 @@
 }
 
 .footer{
-    
     text-align: center;
 }
 
