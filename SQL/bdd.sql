@@ -164,3 +164,12 @@ ALTER TABLE `panier`
 
 ALTER TABLE `panier`
   ADD CONSTRAINT `produit_ibfk_2` FOREIGN KEY (`id_produit`) REFERENCES `users` (`id_user`);
+
+  --
+  -- Contraintes pour la table `Panier`
+  --
+ALTER TABLE `historique`
+  ADD CONSTRAINT `historique_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+
+ALTER TABLE `historique`
+  ADD CONSTRAINT `historique_ibfk_2` FOREIGN KEY (`id_produit`) REFERENCES `produit` (`id_produit`);
