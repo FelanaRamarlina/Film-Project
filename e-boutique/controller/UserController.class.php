@@ -21,6 +21,11 @@ class userController {
       $page ='monEspace';
       require('./views/index.php');
     }
+    
+    public function monpanier(){
+      $page ='monpanier';
+      require('./views/index.php');
+    }
 
     public function inscription() {
       $page = 'inscription';

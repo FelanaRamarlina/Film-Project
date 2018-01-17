@@ -5,6 +5,7 @@ require('./views/index.php');
 if(empty($_SESSION['user'])){
   $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
   $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
+  $monpanier = "<a href='index.php?ctrl=user&action=monpanier'>Mon Panier |</a>";
 }else{
   $page = "default";
   $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
@@ -48,9 +49,9 @@ $controller = new $ctrl($db);
       <div class="header container-fluid no-padding">
           <div class="col-md-12">
             <div class="nav">
-              <a href="#">Mon panier |</a>
+              <?php echo $monpanier ?>
               <?php echo $espacePerso ?>
-              <?php echo $connexion ?> </a>
+              <?php echo $connexion ?>
             </div>
           </div>
           <div class="col-md-12"><h1><a href="index.php">RS films</a></h1><img src="./ressources/img/video-camera.png"/></div>
