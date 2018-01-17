@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `categorie`
 --
 
-CREATE TABLE `categorie` (
+CREATE TABLE `categorie`
   `id_cat` int(10) NOT NULL,
   `libelle` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -42,9 +42,9 @@ INSERT INTO `categorie` (`id_cat`, `libelle`) VALUES
 -- Structure de la table `Panier`
 --
 
-CREATE TABLE `Panier` (
+CREATE TABLE `panier` (
   `id_user` int(3) NOT NULL,
-  `id_produit` int(5) NOT NULL
+  `id_produit` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -115,14 +115,10 @@ INSERT INTO `users` (`id_user`, `email`, `password`, `firstName`, `lastName`, `a
 ALTER TABLE `categorie`
   ADD PRIMARY KEY (`id_cat`);
 
--- Index pour la table `categorie`
---
-ALTER TABLE `produit`
-  ADD PRIMARY KEY (`id_produit`);
 --
 -- Index pour la table `Panier`
 --
-ALTER TABLE `Panier`
+ALTER TABLE `panier`
   ADD KEY `id_user` (`id_user`);
 
 -- Index pour la table `users`
@@ -130,6 +126,10 @@ ALTER TABLE `Panier`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`);
 
+  -- Index pour la table `produit`
+  --
+  ALTER TABLE `produit`
+    ADD PRIMARY KEY (`id_produit`);
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
@@ -155,12 +155,12 @@ ALTER TABLE `users`
 -- Contraintes pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD CONSTRAINT `produit_ifk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
+  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
 --
 -- Contraintes pour la table `Panier`
 --
-ALTER TABLE `Panier`
+ALTER TABLE `panier`
   ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
-  
-ALTER TABLE `Panier`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_produit`) REFERENCES `produit` (`id_produit`);
+
+ALTER TABLE `panier`
+  ADD CONSTRAINT `produit_ibfk_2` FOREIGN KEY (`id_produit`) REFERENCES `users` (`id_user`);
