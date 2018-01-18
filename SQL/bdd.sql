@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 17 jan. 2018 à 22:48
+-- Généré le :  jeu. 18 jan. 2018 à 22:03
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -44,8 +44,16 @@ INSERT INTO `categorie` (`id_cat`, `libelle`) VALUES
 
 CREATE TABLE `historique` (
   `id_user` int(11) NOT NULL,
-  `id_produit` int(11) NOT NULL
+  `id_produit` int(11) NOT NULL,
+  `date_achat` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `historique`
+--
+
+INSERT INTO `historique` (`id_user`, `id_produit`, `date_achat`) VALUES
+(7, 1, '2018-01-18');
 
 -- --------------------------------------------------------
 
