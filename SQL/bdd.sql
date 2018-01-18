@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 15 jan. 2018 à 21:44
+-- Généré le :  mer. 17 jan. 2018 à 22:48
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `categorie`
 --
 
-CREATE TABLE `categorie`
+CREATE TABLE `categorie` (
   `id_cat` int(10) NOT NULL,
   `libelle` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -39,7 +39,18 @@ INSERT INTO `categorie` (`id_cat`, `libelle`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Panier`
+-- Structure de la table `historique`
+--
+
+CREATE TABLE `historique` (
+  `id_user` int(11) NOT NULL,
+  `id_produit` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `panier`
 --
 
 CREATE TABLE `panier` (
@@ -65,18 +76,18 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`id_produit`, `libelle`, `id_categorie`, `prix`) VALUES
-(1, 'Insidious', 2,8),
-(2, 'Get out', 5,10),
-(3, 'CA', 2,12),
-(4, 'Girls Trip', 3,10),
-(5, 'Kiss & Cry', 3,10),
-(6, 'Kingsman', 1,15),
-(7, 'Alice APM', 4,10),
-(8, 'The Revenant', 5,15),
-(9, 'Baby Driver', 1,12),
-(10, 'Valerian', 4,10),
-(11, 'Alibi.com', 3,12),
-(12, 'Demolition', 5,10);
+(1, 'Insidious', 2, 8),
+(2, 'Get out', 5, 10),
+(3, 'CA', 2, 12),
+(4, 'Girls Trip', 3, 10),
+(5, 'Kiss & Cry', 3, 10),
+(6, 'Kingsman', 1, 15),
+(7, 'Alice APM', 4, 10),
+(8, 'The Revenant', 5, 15),
+(9, 'Baby Driver', 1, 12),
+(10, 'Valerian', 4, 10),
+(11, 'Alibi.com', 3, 12),
+(12, 'Demolition', 5, 10);
 
 -- --------------------------------------------------------
 
@@ -116,20 +127,31 @@ ALTER TABLE `categorie`
   ADD PRIMARY KEY (`id_cat`);
 
 --
--- Index pour la table `Panier`
+-- Index pour la table `historique`
+--
+ALTER TABLE `historique`
+  ADD KEY `historique_ibfk_1` (`id_user`),
+  ADD KEY `historique_ibfk_2` (`id_produit`);
+
+--
+-- Index pour la table `panier`
 --
 ALTER TABLE `panier`
   ADD KEY `id_user` (`id_user`);
 
+--
+-- Index pour la table `produit`
+--
+ALTER TABLE `produit`
+  ADD PRIMARY KEY (`id_produit`),
+  ADD KEY `produit_ibfk_1` (`id_categorie`);
+
+--
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`);
 
-  -- Index pour la table `produit`
-  --
-  ALTER TABLE `produit`
-    ADD PRIMARY KEY (`id_produit`);
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
@@ -143,7 +165,7 @@ ALTER TABLE `categorie`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `id_produit` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produit` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
@@ -152,15 +174,22 @@ ALTER TABLE `users`
 --
 -- Contraintes pour les tables déchargées
 --
--- Contraintes pour la table `produit`
+
 --
-ALTER TABLE `produit`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
+-- Contraintes pour la table `historique`
 --
--- Contraintes pour la table `Panier`
+ALTER TABLE `historique`
+  ADD CONSTRAINT `historique_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`),
+  ADD CONSTRAINT `historique_ibfk_2` FOREIGN KEY (`id_produit`) REFERENCES `produit` (`id_produit`);
+
+--
+-- Contraintes pour la table `panier`
 --
 ALTER TABLE `panier`
   ADD CONSTRAINT `panier_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
 
-ALTER TABLE `panier`
-  ADD CONSTRAINT `produit_ibfk_2` FOREIGN KEY (`id_produit`) REFERENCES `users` (`id_user`);
+--
+-- Contraintes pour la table `produit`
+--
+ALTER TABLE `produit`
+  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
