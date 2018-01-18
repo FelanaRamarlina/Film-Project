@@ -1,4 +1,5 @@
-<div class="container">
+<div class="monEspace container">
+  <div class="divTitle col-sm-12"><h1>Données personnelles</h1></div>
   <form>
     <div class="form-row">
       <div class="form-group col-md-6">
