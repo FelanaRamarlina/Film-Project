@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" /> <!-- On insère le css -->
-        <title> Lafaune </title>
+        <link rel="stylesheet" href="../ressources/style.css" /> <!-- On insère le css -->
+        <title> Panier </title>
     </head>
 <?php 
 if (! isset($_SESSION['panier'])) $_SESSION['panier'] = array();
