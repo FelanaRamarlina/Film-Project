@@ -23,7 +23,7 @@ class userController {
     }
     
     public function monpanier(){
-      $page ='monpanier';
+      $page ='panier';
       require('./views/index.php');
     }
 

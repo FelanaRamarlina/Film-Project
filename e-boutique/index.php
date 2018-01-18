@@ -10,6 +10,7 @@ if(empty($_SESSION['user'])){
   $page = "default";
   $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
   $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";
+  $monpanier = "<a href='index.php?ctrl=user&action=monpanier'>Mon Panier |</a>";
 }
 
 ini_set("display_errors", "1");
@@ -49,12 +50,7 @@ $controller = new $ctrl($db);
       <div class="header container-fluid no-padding">
           <div class="col-md-12">
             <div class="nav">
-<<<<<<< HEAD
               <?php echo $monpanier ?>
-=======
-              <a href='index.php?ctrl=user&action=default'>Films |</a>
-              <a href="#">Mon panier |</a>
->>>>>>> origin/master
               <?php echo $espacePerso ?>
               <?php echo $connexion ?>
             </div>
