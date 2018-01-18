@@ -6,6 +6,7 @@
         <title> Panier </title>
     </head>
 <?php 
+    
 if (! isset($_SESSION['panier'])) $_SESSION['panier'] = array();
 
 $pdt_ref = isset($_GET['pdt_ref']) ? $_GET['pdt_ref'] : null;

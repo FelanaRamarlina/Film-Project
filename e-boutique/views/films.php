@@ -31,7 +31,7 @@
         <div class="col-xs-12 col-md-2">
             <img src="./images/insidious.jpg" alt="Insidious" style="width:93%;">
             <p> Insidious 2014 - Full HD  8€</p>
-            <button type="button" class="btn btn-success">Ajouter au panier</button>
+            <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/getout.jpg" alt="getout" style="width:93%;">

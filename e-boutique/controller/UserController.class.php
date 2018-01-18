@@ -51,6 +51,11 @@ class userController {
       $page = 'series';
       require('./views/index.php');
     }
+    
+    public function commande() {
+      $page = 'commande';
+      require('./views/index.php');
+    }
 
     public function doLogin() {
       if(!empty($_SESSION['user'])){
