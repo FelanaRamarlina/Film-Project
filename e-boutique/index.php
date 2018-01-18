@@ -52,9 +52,13 @@ $controller = new $ctrl($db);
             <div class="nav">
               <?php echo $monpanier ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href='index.php?ctrl=user&action=default'>Films |</a>
 =======
 >>>>>>> refonte du panier
+=======
+              <a href='index.php?ctrl=user&action=default'>Films |</a>
+>>>>>>> origin/master
               <?php echo $espacePerso ?>
               <?php echo $connexion ?>
             </div>

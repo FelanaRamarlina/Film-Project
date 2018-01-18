@@ -37,6 +37,16 @@ class userController {
       require('./views/index.php');
     }
 
+    public function historique(){
+      $page ='historique';
+      require('./views/index.php');
+    }
+
+    public function infosPersos(){
+      $page ='infosPersos';
+      require('./views/index.php');
+    }
+
     public function inscription() {
       $page = 'inscription';
       require('./views/index.php');
