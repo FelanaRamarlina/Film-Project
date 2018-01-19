@@ -114,6 +114,10 @@ body {
   text-decoration: none;
 }
 
+.monEspace button {
+  margin-top: 25px;
+}
+
 .footer{
     text-align: center;
 }

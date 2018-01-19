@@ -131,6 +131,9 @@ class userController {
   		require('./views/index.php');
     }
 
+    public function doUpdate() {
+
+    }
     public function deconnexion(){
       session_destroy();
       $page = 'default';
