@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('./views/index.php');
+require_once('./views/index.php');
 
 if(empty($_SESSION['user'])){
   $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
