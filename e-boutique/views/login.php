@@ -1,8 +1,8 @@
 
-	<div class="container">
+	<div class="monEspace container">
 		<div class="wrapper">
 	    <form class="form-signin" action="index.php?ctrl=user&action=doLogin" method="post">
-	      <h2 class="form-signin-heading">Connexion</h2>
+				<div class="divTitle col-sm-12"><h1>Connexion</h1></div>
 	      <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="" autofocus="" /><br>
 	      <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required=""/><br>
 	      <!--<label class="checkbox">

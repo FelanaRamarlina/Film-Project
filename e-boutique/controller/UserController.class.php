@@ -132,13 +132,8 @@ class userController {
     }
 
     public function doUpdate(){
-    if(empty($_POST['email'])||empty($_POST['password'])||empty($_POST['address'])||empty($_POST['postalCode'])||empty($_POST['city'])) {
-  			$page = "infosPersos";
-  			$info = "Veuillez remplir tous les champs";
-  			require("views/index.php");
-  			exit();
-  		}
-    
+      $page = 'infosPersos';
+      require('./views/index.php');
     }
 
     public function deconnexion(){

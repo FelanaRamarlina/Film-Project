@@ -23,7 +23,7 @@
           <tr>
             <th scope="row"><?php  echo $i ?></th>
             <td><?php  echo $donnees['libelle']; ?> </td>
-            <td><?php  echo $prix = $donnees['prix'];?>  </td>
+            <td><?php  echo $prix = $donnees['prix'];?>€ </td>
             <td><?php  echo $prix = $donnees['date_achat'];?>  </td>
           </tr>
         <?php
