@@ -146,7 +146,6 @@ class userController {
         if($email == $_POST['email'] && $email != $_SESSION['user']){
             $info = "L'adresse email insérée existe déjà.";
         }else{
-          echo
             /*On prépare la modification*/
             $req =
             "UPDATE USERS SET
