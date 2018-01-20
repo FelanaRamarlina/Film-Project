@@ -9,13 +9,13 @@
     
 if (! isset($_SESSION['panier'])) $_SESSION['panier'] = array();
 
-$pdt_ref = isset($_GET['pdt_ref']) ? $_GET['pdt_ref'] : null;
+$id_produit = isset($_GET['id_produit']) ? $_GET['id_produit'] : null;
 $quantite = isset($_GET['quantite']) ? $_GET['quantite'] : 1;
 
-if ($pdt_ref == null) echo 'Veuillez sélectionner un article pour le mettre dans le panier!';
+if ($id_produit == null) echo 'Veuillez sélectionner un article pour le mettre dans le panier!';
 else
 if (isset($_GET['ajouter'])){ 
-$_SESSION['panier'][$pdt_ref]['qte'] = $quantite;
+$_SESSION['panier'][$id_produit]['qte'] = $quantite;
 } ;
 if (isset($_GET['supprimer'])) unset($_SESSION['panier']);
 
@@ -26,10 +26,10 @@ echo '<table>
 			<th>Référence</th>
 			<th>Quantité</th>
 		</tr>';
-foreach($_SESSION['panier'] as $pdt_ref=>$article_acheté){
+foreach($_SESSION['panier'] as $id_produit=>$article_acheté){
 if (isset($article_acheté['qte'])){
 echo '	<tr>
-			<td>', $pdt_ref ,'</td>
+			<td>', $id_produit ,'</td>
 			<td>', $article_acheté['qte'] , '</td>
 		</tr>';
 }

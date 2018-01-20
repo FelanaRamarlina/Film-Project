@@ -56,6 +56,16 @@ class userController {
       $page = 'commande';
       require('./views/index.php');
     }
+    
+    public function panier() {
+      $page = 'panier';
+      require('./views/index.php');
+    }
+    
+    public function envoyer() {
+      $page = 'envoyer';
+      require('./views/index.php');
+    }
 
     public function doLogin() {
       if(!empty($_SESSION['user'])){

@@ -6,7 +6,7 @@
     </head>
 
 <?php
-include("./controller/Connexion.class.php");
+//include("./model/Connexion.class.php");
 //session_start();
 
 $total = 0;
@@ -47,9 +47,7 @@ if ($_SESSION['panier']) {
 
 ?>
 &nbsp&nbsp&nbsp
-<form action="envoyer.php" method="get">
-Identifiant : <input type="text" name="codeClient" value="<?php if (isset($_POST['email'])) echo htmlentities(trim($_POST['email'])); ?>">&nbsp;&nbsp;&nbsp;
-Mot de passe : <input type="password" name="motPasse" value="<?php if (isset($_POST['password'])) echo htmlentities(trim($_POST['password'])); ?>"><br /><br />
+<form action="index.php?ctrl=user&action=envoyer" method="get">
 <input type="submit" name="connexion" value="Envoyer la commande">
 </form>
 </html>

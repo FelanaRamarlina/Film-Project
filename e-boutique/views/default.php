@@ -56,15 +56,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="./images/JusticeLeague.jpeg" alt="Justice League" style="width:100%;">
+          <a href="index.php?ctrl=user&action=films"><img src="./images/JusticeLeague.jpeg" alt="Justice League" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <img src="./images/crime.jpeg" alt="Crime" style="width:100%;">
+          <a href="index.php?ctrl=user&action=films"><img src="./images/crime.jpeg" alt="Crime" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <img src="./images/jumanji.jpg" alt="Jumanji" style="width:100%;">
+          <a href="index.php?ctrl=user&action=films"><img src="./images/jumanji.jpg" alt="Jumanji" style="width:100%;"></a>
       </div>
     </div>
 
@@ -86,37 +86,37 @@
             <img src="./images/strangerthings.jpg" alt="Stranger Things" style="width:85%;">
             <p> Stranger Things - HDRIP </p>
             <p> Disponnible : 2017</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=LA7893f-B_A"> Voir la bande-annonce</a></button>
+             <a href="https://www.youtube.com/watch?v=LA7893f-B_A" type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/normandie.jpg" alt="Normandie" style="width:90%;">
             <p> Normandie Nue - Full HD</p>
             <p>Disponnible : 2018</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=K_28848C_6U"> Voir la bande-annonce</a></button>
+            <a href="https://www.youtube.com/watch?v=K_28848C_6U" button type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/naked.jpg" alt="Naked" style="width:90%;">
             <p> Naked - 720p </p>
             <p>Disponnible : 2018</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=FbNVfnjxCtM"> Voir la bande-annonce</a></button>
+            <a href="https://www.youtube.com/watch?v=FbNVfnjxCtM" button type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/ferdinand.jpg" alt="Ferdinand" style="width:86%;">
             <p> Ferdinand 1080p </p>
             <p>Disponnible : 2018</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=XDPdFX7AetU"> Voir la bande-annonce</a></button>
+            <a href="https://www.youtube.com/watch?v=XDPdFX7AetU" button type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/epouse.jpg" alt="Epouse" style="width:86%;">
             <p> Epouse moi mon pote HD </p>
             <p>Disponnible : 2017</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=0illlpw6TZ0"> Voir la bande-annonce</a></button>
+            <a href="https://www.youtube.com/watch?v=0illlpw6TZ0" button type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/bright.jpg" alt="Bright" style="width:84%;">
             <p> Bright </p>
             <p>Disponnible : 2018</p>
-            <button type="button" class="btn btn-success" style="width:95%;"><a href="https://www.youtube.com/watch?v=ZKzvjeqmxuY"> Voir la bande-annonce</a></button>
+            <a href="https://www.youtube.com/watch?v=ZKzvjeqmxuY" button type="button" class="btn btn-success" style="width:95%;"> Voir la bande-annonce</a>
         </div>
     </div>
 
