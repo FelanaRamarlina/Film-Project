@@ -1,15 +1,11 @@
 <?php
 require_once('./model/UserManager.class.php');
-$film = "SELECT * FROM produit";
-$req = $this->db->prepare($film);
-$req->execute();
-
-$result = $req->fetchAll();
-print_r($result);
-foreach ($result as $films)
+$films = "SELECT * FROM produit WHERE id_produit=id_produit";
+$query = $this->db->query($films);
+$i = 1;
+while ($donnees = $query->fetch())
 {
-    $nomsfilms = $films['libelle'];
-    
+  $libelle = $donnees['libelle'];
 }
 ?>
 <div class="container-fluid">
@@ -43,7 +39,7 @@ foreach ($result as $films)
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
             <img src="./images/insidious.jpg" alt="Insidious" style="width:93%;">
-            <?php echo $nomsfilms; ?>
+            <?php echo $libelle;?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
         <div class="col-xs-12 col-md-2">
