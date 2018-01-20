@@ -137,39 +137,38 @@ class userController {
   			exit();
   		}else{
         /*On vérifie si l'adresse n'existe pas déjà*/
-        $dologinQuery = "SELECT email FROM users WHERE email = :email";
-    		$req = $this->db->prepare($dologinQuery);
-    		$ex = $req->execute(array(
-    				"email" => $_POST['email'],
-    		));
-        while ($donnees = $req->fetch())
+        $req = "SELECT email FROM users WHERE email ='".$_POST['email']."'";
+        $query = $this->db->query($req);
+        while ($donnees = $query->fetch())
         {
             $email = $donnees['email'];
         }
-        if(!empty($email) && $email != $_POST['email'] ){
-          $info = "L'adresse email insérée existe déjà.";
+        if($email == $_POST['email'] && $email != $_SESSION['user']){
+            $info = "L'adresse email insérée existe déjà.";
         }else{
-          /*On prépare la modification*/
-          $modification =
-          "UPDATE USERS SET
-            email='".$_POST['email']."',
-            password='".$_POST['password']."',
-            postalCode='".$_POST['postalCode']."',
-            city='".$_POST['city']."'
-          WHERE email='".$_SESSION["user"]."'
-          ";
-          $query = $this->db->query($modification);
-          if($query) {
-            $info = "Vos modifications ont bien été enregistrées.";
-          }else{
-            $info = "erreur sql";
-            var_dump($ex);
-          }
+          echo
+            /*On prépare la modification*/
+            $req =
+            "UPDATE USERS SET
+              email='".$_POST['email']."',
+              password='".md5($_POST['password'])."',
+              address='".$_POST['address']."',
+              postalCode='".$_POST['postalCode']."',
+              city='".$_POST['city']."'
+            WHERE email='".$_SESSION["user"]."'
+            ";
+            $query = $this->db->query($req);
+            if($query) {
+              $info = "Vos modifications ont bien été enregistrées.";
+            }else{
+              $info = "erreur sql";
+            }
         }
       }
       $page = 'infosPersos';
       require('./views/index.php');
     }
+
 
     public function deconnexion(){
       session_destroy();
