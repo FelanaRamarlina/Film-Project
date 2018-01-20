@@ -12,7 +12,6 @@ while ($donnees = $query->fetch())
 }
 ?>
 <div class="monEspace container">
-  <?php if(isset($info)) { echo $info;} ?>
   <div class="wrapper">
     <div class="divTitle col-sm-12"><h1>Données personnelles</h1></div>
     <form class="form-signin" action="index.php?ctrl=user&action=doUpdate" method="post">
