@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="./ressources/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <div class="container-fluid">
     <div class="container">
 
@@ -19,7 +18,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href='index.php?ctrl=user&action=films'>Films <span class="sr-only"></span></a></li>
-            <li><a href='index.php?ctrl=user&action=series'>Séries</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">

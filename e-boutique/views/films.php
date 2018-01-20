@@ -1,3 +1,16 @@
+<?php
+require_once('./model/UserManager.class.php');
+$film = "SELECT * FROM produit";
+$query = $this->db->query($film);
+$i = 1;
+foreach ($query as $donnees)
+{
+
+        $libelle = $unfilm['libelle'];
+        $prix = $unfilm['prix'];
+  
+}
+?>
 <div class="container-fluid">
     <div class="container">
 
@@ -15,7 +28,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="index.php?ctrl=user&action=films">Films <span class="sr-only"></span></a></li>
-            <li><a href="index.php?ctrl=user&action=series">Séries</a></li>
           </ul>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -30,7 +42,7 @@
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
             <img src="./images/insidious.jpg" alt="Insidious" style="width:93%;">
-            <p> Insidious 2014 - Full HD  8€</p>
+            <?php echo $libelle;?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
         <div class="col-xs-12 col-md-2">
