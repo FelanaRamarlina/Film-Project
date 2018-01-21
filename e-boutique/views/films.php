@@ -2,14 +2,13 @@
 require_once('./model/UserManager.class.php');
 $films = "SELECT * FROM produit";
 $query = $this->db->query($films);
-$i = 1;
-while ($donnees = $query->fetch())
+/*while ($donnees = $query->fetch())
 {
   $libelle = $donnees['libelle'];
   $photo = $donnees['photo'];
   $prix = $donnees['prix'];
 
-}
+}*/
 
 ?>
 <div class="container-fluid">
@@ -41,14 +40,16 @@ while ($donnees = $query->fetch())
         </nav>
 
     <div class="col-xs-12 col-md-12 cinqphotos">
+      <?php while ($donnees = $query->fetch()){ ?>
         <div class="col-xs-12 col-md-2">
-            <img src="./images/<?php echo $photo;?>" alt="Insidious" style="width:93%;">
-            <?php echo ' - ', $prix,'€';?>
+            <img src="./images/<?php echo $donnees['photos'];?>" alt="<?php echo $donnees['libelle'];?>" style="width:93%;">
+            <?php //echo ' - ', $donnees['prix'],'€';?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
+      <?php }?>
+        <!--
         <div class="col-xs-12 col-md-2">
             <img src="./images/getout.jpg" alt="getout" style="width:93%;">
-            <?php echo $libelle;?>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>
         <div class="col-xs-12 col-md-2">
@@ -109,4 +110,5 @@ while ($donnees = $query->fetch())
     </div>
 
     </div>
+  -->
 </div>
