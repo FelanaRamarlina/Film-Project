@@ -121,48 +121,52 @@ class userController {
     }
 
     public function doCreate(){
-      if(empty($_POST['email'])||empty($_POST['password'])||empty($_POST['nom'])||empty($_POST['prenom'])||empty($_POST['address'])||empty($_POST['cp'])||empty($_POST['ville'])) {
-  			$page = "inscription";
-  			$info = "Veuillez remplir tous les champs";
-  			require("views/index.php");
-  			exit();
-  		}else{
-          /*On vérifie si l'adresse n'existe pas déjà*/
-          $req = "SELECT email FROM users WHERE email ='".$_POST['email']."'";
-          $query = $this->db->query($req);
-          while ($donnees = $query->fetch())
-          {
-              $email = $donnees['email'];
-          }
-          if($email == $_POST['email']){
-              $page = "inscription";
-              $info = "L'adresse email insérée existe déjà.";
-          }else{
-        		$doCreateQuery = "INSERT INTO users VALUES(
-        			'',
-        			:email,
-        			:password,
-        			:firstName,
-        			:lastName,
-        			:address,
-        			:postalCode,
-        			:city,
-        			:admin
-        		)";
-        		$req = $this->db->prepare($doCreateQuery);
-        		$req->execute(array(
-        			"email" => $_POST['email'],
-        			"password" => md5($_POST['password']),
-        			"firstName" => $_POST['nom'],
-        			"lastName" => $_POST['prenom'],
-        			"address" => $_POST['address'],
-        			"postalCode" => $_POST['cp'],
-        			"city" => $_POST['ville'],
-        			"admin" => 0
-        		));
+      if(!empty($_SESSION['user'])){
+        $page = "default";
+      }else{
+        if(empty($_POST['email'])||empty($_POST['password'])||empty($_POST['nom'])||empty($_POST['prenom'])||empty($_POST['address'])||empty($_POST['cp'])||empty($_POST['ville'])) {
+    			$page = "inscription";
+    			$info = "Veuillez remplir tous les champs";
+    			require("views/index.php");
+    			exit();
+    		}else{
+            /*On vérifie si l'adresse n'existe pas déjà*/
+            $req = "SELECT email FROM users WHERE email ='".$_POST['email']."'";
+            $query = $this->db->query($req);
+            while ($donnees = $query->fetch())
+            {
+                $email = $donnees['email'];
+            }
+            if($email == $_POST['email']){
+                $page = "inscription";
+                $info = "L'adresse email insérée existe déjà.";
+            }else{
+          		$doCreateQuery = "INSERT INTO users VALUES(
+          			'',
+          			:email,
+          			:password,
+          			:firstName,
+          			:lastName,
+          			:address,
+          			:postalCode,
+          			:city,
+          			:admin
+          		)";
+          		$req = $this->db->prepare($doCreateQuery);
+          		$req->execute(array(
+          			"email" => $_POST['email'],
+          			"password" => md5($_POST['password']),
+          			"firstName" => $_POST['nom'],
+          			"lastName" => $_POST['prenom'],
+          			"address" => $_POST['address'],
+          			"postalCode" => $_POST['cp'],
+          			"city" => $_POST['ville'],
+          			"admin" => 0
+          		));
 
-        		$page = "default";
-            $_SESSION['user'] = $_POST['email'];
+          		$page = "default";
+              $_SESSION['user'] = $_POST['email'];
+          }
         }
       }
   		require('./views/index.php');
