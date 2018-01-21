@@ -76,26 +76,27 @@ CREATE TABLE `produit` (
   `id_produit` int(5) NOT NULL,
   `libelle` varchar(50) DEFAULT NULL,
   `id_categorie` int(5) DEFAULT NULL,
-  `prix` int(11) DEFAULT NULL
+  `prix` int(11) DEFAULT NULL,
+  `photos` text(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produit` (`id_produit`, `libelle`, `id_categorie`, `prix`) VALUES
-(1, 'Insidious', 2, 8),
-(2, 'Get out', 5, 10),
-(3, 'CA', 2, 12),
-(4, 'Girls Trip', 3, 10),
-(5, 'Kiss & Cry', 3, 10),
-(6, 'Kingsman', 1, 15),
-(7, 'Alice APM', 4, 10),
-(8, 'The Revenant', 5, 15),
-(9, 'Baby Driver', 1, 12),
-(10, 'Valerian', 4, 10),
-(11, 'Alibi.com', 3, 12),
-(12, 'Demolition', 5, 10);
+INSERT INTO `produit` (`id_produit`, `libelle`, `id_categorie`, `prix`, `photos`) VALUES
+(1, 'Insidious', 2, 8, 'insidious.jpg'),
+(2, 'Get out', 5, 10,'getout.jpg'),
+(3, 'CA', 2, 12,'%C3%A7a.jpg'),
+(4, 'Girls Trip', 3, 10,'girls.jpg'),
+(5, 'Kiss & Cry', 3, 10,'kiss.jpg'),
+(6, 'Kingsman', 1, 15,'kingsman.jpg'),
+(7, 'Alice APM', 4, 10,'alice.jpg'),
+(8, 'The Revenant', 5, 15,'revenant.jpg'),
+(9, 'Baby Driver', 1, 12,'baby.jgp'),
+(10, 'Valerian', 4, 10,'valerian.jpg'),
+(11, 'Alibi.com', 3, 12,'alibi.jpg'),
+(12, 'Demolition', 5, 10,'demolition');
 
 -- --------------------------------------------------------
 
@@ -199,5 +200,5 @@ ALTER TABLE `panier`
 --
 -- Contraintes pour la table `produit`
 --
-ALTER TABLE `produit`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
+ -- ALTER TABLE `produit`
+--  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_cat`);
