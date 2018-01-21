@@ -18,7 +18,11 @@ class userController {
     }
 
     public function monEspace(){
-      $page ='monEspace';
+      if(empty($_SESSION['user'])){
+        $page = "default";
+      }else{
+        $page ='monEspace';
+      }
       require('./views/index.php');
     }
 
@@ -28,17 +32,29 @@ class userController {
     }
 
     public function historique(){
-      $page ='historique';
+      if(empty($_SESSION['user'])){
+        $page = "default";
+      }else{
+        $page ='historique';
+      }
       require('./views/index.php');
     }
 
     public function infosPersos(){
-      $page ='infosPersos';
-      require('./views/index.php');
+      if(!empty($_SESSION['user'])){
+        $page = "default";
+      }else{
+        $page ='infosPersos';
+        require('./views/index.php');
+      }
     }
 
     public function inscription() {
-      $page = 'inscription';
+      if(empty($_SESSION['user'])){
+        $page = 'default';
+      }else{
+        $page = 'inscription';
+      }
       require('./views/index.php');
     }
 
@@ -58,9 +74,6 @@ class userController {
     }
 
     public function doLogin() {
-      if(!empty($_SESSION['user'])){
-        $page = "default";
-      }else{
         $this->user = new User();
         $dologinQuery = "SELECT email, password,admin FROM users WHERE email = :email and password = :password;";
     		$req = $this->db->prepare($dologinQuery);
@@ -80,6 +93,7 @@ class userController {
         if (!empty($login) && !empty($password)) {
       		$info = "Connexion reussie";
       		$_SESSION['user'] = $login;
+          echo $_SESSION['user'];
           if($admin==1){
             $page = "admin";
           }else{
@@ -89,7 +103,6 @@ class userController {
         	$info = "Identifiants incorrects.";
     			$page = "login";
         }
-      }
       require('./views/index.php');
     }
 
@@ -142,40 +155,44 @@ class userController {
     }
 
     public function doUpdate(){
-      if(empty($_POST['email'])||empty($_POST['password'])||empty($_POST['address'])||empty($_POST['postalCode'])||empty($_POST['city'])) {
-  			$page = "infosPersos";
-  			$info = "Veuillez remplir tous les champs";
-  			exit();
-  		}else{
-        /*On vérifie si l'adresse n'existe pas déjà*/
-        $req = "SELECT email FROM users WHERE email ='".$_POST['email']."'";
-        $query = $this->db->query($req);
-        while ($donnees = $query->fetch())
-        {
-            $email = $donnees['email'];
+      if(empty($_SESSION['user'])){
+        $page = "default";
+      }else{
+        if(empty($_POST['email'])||empty($_POST['password'])||empty($_POST['address'])||empty($_POST['postalCode'])||empty($_POST['city'])) {
+    			$page = "infosPersos";
+    			$info = "Veuillez remplir tous les champs";
+    			exit();
+    		}else{
+          /*On vérifie si l'adresse n'existe pas déjà*/
+          $req = "SELECT email FROM users WHERE email ='".$_POST['email']."'";
+          $query = $this->db->query($req);
+          while ($donnees = $query->fetch())
+          {
+              $email = $donnees['email'];
+          }
+          if($email == $_POST['email'] && $email != $_SESSION['user']){
+              $info = "L'adresse email insérée existe déjà.";
+          }else{
+              /*On prépare la modification*/
+              $req =
+              "UPDATE USERS SET
+                email='".$_POST['email']."',
+                password='".md5($_POST['password'])."',
+                address='".$_POST['address']."',
+                postalCode='".$_POST['postalCode']."',
+                city='".$_POST['city']."'
+              WHERE email='".$_SESSION["user"]."'
+              ";
+              $query = $this->db->query($req);
+              if($query) {
+                $info = "Vos modifications ont bien été enregistrées.";
+              }else{
+                $info = "erreur sql";
+              }
+          }
         }
-        if($email == $_POST['email'] && $email != $_SESSION['user']){
-            $info = "L'adresse email insérée existe déjà.";
-        }else{
-            /*On prépare la modification*/
-            $req =
-            "UPDATE USERS SET
-              email='".$_POST['email']."',
-              password='".md5($_POST['password'])."',
-              address='".$_POST['address']."',
-              postalCode='".$_POST['postalCode']."',
-              city='".$_POST['city']."'
-            WHERE email='".$_SESSION["user"]."'
-            ";
-            $query = $this->db->query($req);
-            if($query) {
-              $info = "Vos modifications ont bien été enregistrées.";
-            }else{
-              $info = "erreur sql";
-            }
-        }
+        $page = 'infosPersos';
       }
-      $page = 'infosPersos';
       require('./views/index.php');
     }
 

@@ -1,37 +1,36 @@
 <?php
-session_start();
-require_once('./views/index.php');
+  session_start();
 
-if(empty($_SESSION['user'])){
-  $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
-  $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
-  $monpanier = "";
-}else{
-  $page = "default";
-  $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
-  $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";
-  $monpanier = "<a href='index.php?ctrl=user&action=monpanier'>Mon Panier |</a>";
-}
+  require_once('./views/index.php');
+  ini_set("display_errors", "1");
+  require_once('model/Connexion.class.php');
+  $pdoBuilder = new Connexion();
+  $db = $pdoBuilder->getConnexion();
 
-ini_set("display_errors", "1");
-require_once('model/Connexion.class.php');
-$pdoBuilder = new Connexion();
-$db = $pdoBuilder->getConnexion();
+  if(empty($_SESSION['user'])){
+    $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
+    $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
+    $monpanier = "";
+    }else{
+    $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
+    $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";
+    $monpanier = "<a href='index.php?ctrl=user&action=monpanier'>Mon Panier |</a>";
+  }
 
-if (( isset($_GET['ctrl']) && !empty($_GET['ctrl']) ) && ( isset($_GET['action']) && !empty($_GET['action']) )) {
-    $ctrl = $_GET['ctrl'];
-    $action = $_GET['action'];
-}
-else {
-    $ctrl = 'User';
-    $action = 'default';
-}
 
-require_once('controller/' . $ctrl  . 'Controller.class.php');
+  if (( isset($_GET['ctrl']) && !empty($_GET['ctrl']) ) && ( isset($_GET['action']) && !empty($_GET['action']) )) {
+      $ctrl = $_GET['ctrl'];
+      $action = $_GET['action'];
+  }
+  else {
+      $ctrl = 'User';
+      $action = 'default';
+  }
 
-$ctrl = $ctrl . 'Controller';
-$controller = new $ctrl($db);
+  require_once('controller/' . $ctrl  . 'Controller.class.php');
 
+  $ctrl = $ctrl . 'Controller';
+  $controller = new $ctrl($db);
 ?>
 
 
