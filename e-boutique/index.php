@@ -4,6 +4,8 @@
   require_once('./views/index.php');
   ini_set("display_errors", "1");
   require_once('model/Connexion.class.php');
+  require('./controller/panierController.class.php');
+$panier = new panier();
   $pdoBuilder = new Connexion();
   $db = $pdoBuilder->getConnexion();
 

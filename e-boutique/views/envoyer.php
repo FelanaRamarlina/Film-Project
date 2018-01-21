@@ -37,7 +37,7 @@ else
 					$req = $bdd->prepare('INSERT INTO panier(date_achat, id_client, id_produit, quantite) VALUES(:date_achat, :id_user, :produit, :quantite)');
 					$req->execute(array(
 						'date_achat' => $moment,
-						'id_user' => $_GET["codeClient"],
+						'id_user' => $_GET["id_user"],
 						'produit' => $ref,
 						'quantite' => $qte));
                     
