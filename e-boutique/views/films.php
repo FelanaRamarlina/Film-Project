@@ -1,12 +1,15 @@
 <?php
 require_once('./model/UserManager.class.php');
-$films = "SELECT * FROM produit WHERE id_produit=id_produit";
+$films = "SELECT * FROM produit where id_produit = 1";
 $query = $this->db->query($films);
 $i = 1;
 while ($donnees = $query->fetch())
 {
   $libelle = $donnees['libelle'];
+  $photo = $donnees['photo'];
+
 }
+
 ?>
 <div class="container-fluid">
     <div class="container">
@@ -35,10 +38,10 @@ while ($donnees = $query->fetch())
         </div><!-- navbar-collapse -->
             </div><!-- container-fluid -->
         </nav>
-        
+
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
-            <img src="./images/insidious.jpg" alt="Insidious" style="width:93%;">
+            <img src="./images/<?php echo $photo;?>" alt="Insidious" style="width:93%;">
             <?php echo $libelle;?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
@@ -46,31 +49,31 @@ while ($donnees = $query->fetch())
             <img src="./images/getout.jpg" alt="getout" style="width:93%;">
             <p> Get Out 2016 - Full HD  10€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/%C3%A7a.jpg" alt="ca" style="width:90%;">
             <p> ça (film) 2017 - Full HD 12€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/girls.jpg" alt="girls" style="width:95%;">
             <p> Girls Trip 2016 - 720p  10€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/kiss.jpg" alt="kiss&cry" style="width:95%;">
             <p> Kiss & Cry 2015 - HD  10€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>  
-        
-        <div class="col-xs-12 col-md-2">    
+        </div>
+
+        <div class="col-xs-12 col-md-2">
             <img src="./images/kingsman.jpg" alt="kingsman" style="width:95%;">
             <p> Kingsman 2017 - 720p  15€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>          
+        </div>
     </div>
         <br/>
-        
+
     <div class="col-xs-12 col-md-12 dixphotos">
         <div class="col-xs-12 col-md-2">
             <img src="./images/alice.jpg" alt="Alice" style="width:93%;">
@@ -81,28 +84,28 @@ while ($donnees = $query->fetch())
             <img src="./images/revenant.jpg" alt="Revenant" style="width:85%;">
             <p> The Revenant - 1080p  15€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/baby.jpg" alt="baby" style="width:93%;">
             <p> Baby Driver 2017 - HD 12€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/valerian.jpg" alt="valerian" style="width:87%;">
             <p> Valerian 2017 - 720p  10€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>    
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/alibi.jpg" alt="Alibi" style="width:95%;">
             <p> Alibi.com 2017 - HD - 12€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>  
-        <div class="col-xs-12 col-md-2">    
+        </div>
+        <div class="col-xs-12 col-md-2">
             <img src="./images/demolition.jpg" alt="Demolition" style="width:95%;">
             <p> Demolition 2016 - 720p  10€</p>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
-        </div>  
-    </div>    
-        
+        </div>
     </div>
-</div>    
+
+    </div>
+</div>
