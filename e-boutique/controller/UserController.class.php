@@ -13,8 +13,12 @@ class userController {
     }
 
     public function login() {
+      if(!empty($_SESSION['user'])){
+        $page = "default";
+      }else {
         $page = 'login';
-        require('./views/index.php');
+      }
+      require('./views/index.php');
     }
 
     public function monEspace(){
