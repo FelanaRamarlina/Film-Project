@@ -87,7 +87,7 @@ CREATE TABLE `produit` (
 INSERT INTO `produit` (`id_produit`, `libelle`, `id_categorie`, `prix`, `photos`) VALUES
 (1, 'Insidious', 2, 8, 'insidious.jpg'),
 (2, 'Get out', 5, 10,'getout.jpg'),
-(3, 'CA', 2, 12,'%C3%A7a.jpg'),
+(3, 'CA', 2, 12,'ca.jpg'),
 (4, 'Girls Trip', 3, 10,'girls.jpg'),
 (5, 'Kiss & Cry', 3, 10,'kiss.jpg'),
 (6, 'Kingsman', 1, 15,'kingsman.jpg'),
