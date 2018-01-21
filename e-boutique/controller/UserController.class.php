@@ -41,12 +41,12 @@ class userController {
     }
 
     public function infosPersos(){
-      if(!empty($_SESSION['user'])){
+      if(empty($_SESSION['user'])){
         $page = "default";
       }else{
         $page ='infosPersos';
-        require('./views/index.php');
       }
+      require('./views/index.php');
     }
 
     public function inscription() {
@@ -72,18 +72,21 @@ class userController {
       $page = 'commande';
       require('./views/index.php');
     }
-    
+
     public function panier() {
       $page = 'panier';
       require('./views/index.php');
     }
-    
+
     public function envoyer() {
       $page = 'envoyer';
       require('./views/index.php');
     }
 
     public function doLogin() {
+      if(!empty($_SESSION['user'])) {
+        $page = 'default';
+      }else {
         $this->user = new User();
         $dologinQuery = "SELECT email, password,admin FROM users WHERE email = :email and password = :password;";
     		$req = $this->db->prepare($dologinQuery);
@@ -113,6 +116,7 @@ class userController {
         	$info = "Identifiants incorrects.";
     			$page = "login";
         }
+      }
       require('./views/index.php');
     }
 
