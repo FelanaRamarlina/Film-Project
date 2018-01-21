@@ -43,7 +43,7 @@ $query = $this->db->query($films);
       <?php while ($donnees = $query->fetch()){ ?>
         <div class="col-xs-12 col-md-2">
             <img src="./images/<?php echo $donnees['photos'];?>" alt="<?php echo $donnees['libelle'];?>" style="width:93%;">
-            <?php //echo ' - ', $donnees['prix'],'€';?>
+            <?php echo $donnees['libelle'],' - ', $donnees['prix'],'€';?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
       <?php }?>
