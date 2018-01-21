@@ -106,7 +106,6 @@ class userController {
         if (!empty($login) && !empty($password)) {
       		$info = "Connexion reussie";
       		$_SESSION['user'] = $login;
-          echo $_SESSION['user'];
           if($admin==1){
             $page = "admin";
           }else{
