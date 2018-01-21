@@ -50,7 +50,7 @@ class userController {
     }
 
     public function inscription() {
-      if(empty($_SESSION['user'])){
+      if(!empty($_SESSION['user'])){
         $page = 'default';
       }else{
         $page = 'inscription';
@@ -84,9 +84,9 @@ class userController {
     }
 
     public function doLogin() {
-      if(!empty($_SESSION['user'])) {
-        $page = 'default';
-      }else {
+     if(!empty($_SESSION['user'])){
+       $page = "default";
+     }else{
         $this->user = new User();
         $dologinQuery = "SELECT email, password,admin FROM users WHERE email = :email and password = :password;";
     		$req = $this->db->prepare($dologinQuery);
