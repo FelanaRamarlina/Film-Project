@@ -1,12 +1,13 @@
 <?php
 require_once('./model/UserManager.class.php');
-$films = "SELECT * FROM produit where id_produit = 1";
+$films = "SELECT * FROM produit";
 $query = $this->db->query($films);
 $i = 1;
 while ($donnees = $query->fetch())
 {
   $libelle = $donnees['libelle'];
   $photo = $donnees['photo'];
+  $prix = $donnees['prix'];
 
 }
 
@@ -42,12 +43,12 @@ while ($donnees = $query->fetch())
     <div class="col-xs-12 col-md-12 cinqphotos">
         <div class="col-xs-12 col-md-2">
             <img src="./images/<?php echo $photo;?>" alt="Insidious" style="width:93%;">
-            <?php echo $libelle;?>
+            <?php echo ' - ', $prix,'€';?>
             <a href="index.php?ctrl=user&action=commande" class="btn btn-success" role="button">Ajouter au panier</a>
         </div>
         <div class="col-xs-12 col-md-2">
             <img src="./images/getout.jpg" alt="getout" style="width:93%;">
-            <p> Get Out 2016 - Full HD  10€</p>
+            <?php echo $libelle;?>
             <button type="button" class="btn btn-success">Ajouter au panier</button>
         </div>
         <div class="col-xs-12 col-md-2">
