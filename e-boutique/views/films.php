@@ -46,7 +46,7 @@ $query = $this->db->query($films);
         <div class="film col-md-3">
           <div class="col-md-12"><img class="photo" src="./images/<?php echo $donnees['photos'];?>" style="width:220px;height:310px;"></div>
           <div class="col-md-12"><center><p><?php echo $donnees['libelle'],' - ', $donnees['prix'],'€';?></p></center></div>
-          <div class="col-md-12"><center><a href="index.php?ctrl=panier&action=addPanier" class="btn btn-success" role="button">Ajouter au panier</a></center></div>
+          <div class="col-md-12"><center><a href="index.php?ctrl=panier&action=addPanier&?id=<?=$donnees['id_produit'];?>" class="btn btn-success" role="button">Ajouter au panier</a></center></div>
 
         </div>
       <?php }?>

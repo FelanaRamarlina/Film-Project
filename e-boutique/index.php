@@ -11,7 +11,7 @@
   if(empty($_SESSION['user'])){
     $connexion = "<a href='index.php?ctrl=user&action=login'>Connexion</a>";
     $espacePerso = "<a href='index.php?ctrl=user&action=inscription'>Inscription |</a>";
-    $monpanier = "";
+    $monpanier = "<a href='index.php?ctrl=user&action=panier'>Panier |</a>";
     }else{
     $connexion = "<a href='index.php?ctrl=user&action=deconnexion'>Deconnexion </a>";
     $espacePerso = "<a href='index.php?ctrl=user&action=monEspace'>Mon espace |</a>";

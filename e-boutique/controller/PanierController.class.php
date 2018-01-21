@@ -23,6 +23,15 @@ class panierController {
       }
       require('./views/index.php');
     }
+    
+    public function add($id_produit)
+    {
+        $_SESSION['panier'][$id_produit] = 1;
+    }
 
+    public function delete($id_produit){
+        unset($_SESSION['panier'][$id_produit] = 1);
+        
+    }
 
 }
